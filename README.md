@@ -57,6 +57,30 @@ data abc_new;
     if _N_ = 3 then output;
 run;
 
+MAKING NEW DATA AND THEN MERGE 
+
+data x;
+input sno name$ age gender$;
+cards;
+1 karan 27 m
+2 arpan 25 f
+;
+run;
+
+data y;
+input sno name$ age gender$;
+cards;
+3 mishra 24 m
+4 janvi 20 f
+;
+run;
+
+data aa;
+set x y ;
+run;
+
+proc print data=aa;
+run;
 
 
 
