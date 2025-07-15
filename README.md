@@ -82,6 +82,36 @@ run;
 proc print data=aa;
 run;
 
+TO COVERT .SAV FILE TO .SAS FILE AND THEN SAVE 
+
+
+libname faers "/home/u64263069/faers";
+
+proc import datafile='/home/u64263069/faers/DEMO22Q1.sav'
+out=faers.demo22q1
+dbms=sav
+replace;
+run;
+
+PROC IMPORT DATAFILE='/home/u64263069/faers/DRUG22Q1.sav'
+out=faers.drug22q1
+dbms=sav
+replace;
+run;
+
+proc import datafile='/home/u64263069/faers/OUTC22Q1.sav'
+out=faers.outc22q1
+dbms=sav
+replace;
+run;
+
+proc import datafile='/home/u64263069/faers/REAC22Q1.sav'
+out=faers.reac22q1
+dbms=sav
+replace;
+run;
+
+
 
 
 
